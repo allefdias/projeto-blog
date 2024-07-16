@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Simples</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DEPÓSITO<img src="./0_Wl657SREi_lBH4rQ.png"> <span class="span1">DOS INDIGUINADOS</span></h1>
+    </header>
+    <div class="container">
+        <p class="pDeposito">Deposite a Sua Indiguinação Com a Situação do Brasil Aqui ⤵</p>
+        
+        <div class="post-list">
+            <!-- Lista de postagens será renderizada aqui -->
+        </div>
+        <button onclick="showNewPostForm()">Adicionar Nova Indiguinação </button>
+        <div class="new-post-form" id="newPostForm" style="display: none;">
+            <h2>Nova Postagem</h2>
+            <input type="text" id="postAuthor" placeholder="Seu nome">
+            <input type="text" id="postTitle" placeholder="Título">
+            <textarea id="postContent" placeholder="Conteúdo"></textarea>
+            <input type="file" id="postImage" accept="image/*">
+            <button onclick="addPost()">Adicionar</button>
+            <button onclick="hideNewPostForm()">Cancelar</button>
+        </div>
+    </div>
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hidePostDetails()">&times;</span>
+            <div class="post-details" id="postDetails">
+                <!-- Detalhes da postagem serão renderizados aqui -->
+            </div>
+            <div class="comments-section" id="commentsSection">
+                <h3>Comentários</h3>
+                <div class="comments-list" id="commentsList">
+                    <!-- Lista de comentários será renderizada aqui -->
+                </div>
+                <div class="new-comment-form">
+                    <input type="text" id="commentAuthor" placeholder="Seu nome">
+                    <textarea id="commentContent" placeholder="Seu comentário"></textarea>
+                    <button onclick="addComment()">Adicionar Comentário</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
